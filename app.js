@@ -34,9 +34,7 @@ app.get("/compose", function(req, res){
 })
 
 app.get("/posts/:title", function(req, res){
-
   const reqTitle = lodash.lowerCase(req.params.title);
-
   posts.forEach(function(post){
     let postTitle = lodash.lowerCase(post.title);
     if(reqTitle === postTitle){
